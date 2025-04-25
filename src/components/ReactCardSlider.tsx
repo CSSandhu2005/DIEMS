@@ -106,7 +106,7 @@ const ReactCardSlider = () => {
         {alumniData.map((alumnus, index) => (
           <div
             key={index}
-            className="min-w-[280px] max-w-[280px] h-[350px] border-2  border-primary/50 shadow-[inset_0px_0px_30px_0px] shadow-primary/100 backdrop-blur-2 shadow-md rounded-2xl p-6 flex-shrink-0 text-center flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="min-w-[280px] max-w-[280px] h-[350px] border-2  border-primary/50 shadow-primary/100 backdrop-blur-2 shadow-md rounded-2xl p-6 flex-shrink-0 text-center flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           > 
             <img
               src={alumnus.image}

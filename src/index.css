@@ -104,5 +104,34 @@
     .section { 
       @apply py-8 md:py-16; 
     }
+
+    .section-head { 
+      @apply pb-8 text-center 
+        md:pb-16
+
+        lg:max-w-screen-sm
+        lg:mx-auto
+      ;
+    }
+
+    .section-subtitle { 
+      @apply text-primary uppercase font-semibold text-5xl; 
+    }
+
+    .section-title { 
+      @apply text-foreground 
+      text-2xl
+      font-semibold
+      leading-snug
+      py-4
+      
+      md:text-[30px]; 
+    }
+
+    .section-text {
+      @apply text-muted-foreground 
+      md:text-xl
+      ; 
+    }
   }
 }

@@ -27,8 +27,8 @@ import {
 } from 'lucide-react';
 
 import {
-  feature1,
-  feature2,
+  // feature1,
+  // feature2,
   blog1,
   blog2,
   blog3,
@@ -46,20 +46,60 @@ export const navMenu: MenuItem[] = [
     href: '/academics',
     label: 'Academics',
     submenu: [
-      { href: '/academics/courses', icon: <BookOpen />, label: 'Courses Offered', desc: 'Explore UG & PG courses in tech and sciences.' },
-      { href: '/academics/departments', icon: <Library />, label: 'Departments', desc: 'All departments under one roof.' },
-      { href: '/academics/syllabus', icon: <ClipboardList />, label: 'Syllabus & Curriculum', desc: 'Get the latest academic structure.' },
-      { href: '/academics/faculty', icon: <Users2 />, label: 'Faculty', desc: 'Meet our experienced educators.' },
+      {
+        href: '/academics/courses',
+        icon: <BookOpen />,
+        label: 'Courses Offered',
+        desc: 'Explore UG & PG courses in tech and sciences.',
+      },
+      {
+        href: '/academics/departments',
+        icon: <Library />,
+        label: 'Departments',
+        desc: 'All departments under one roof.',
+      },
+      {
+        href: '/academics/syllabus',
+        icon: <ClipboardList />,
+        label: 'Syllabus & Curriculum',
+        desc: 'Get the latest academic structure.',
+      },
+      {
+        href: '/academics/faculty',
+        icon: <Users2 />,
+        label: 'Faculty',
+        desc: 'Meet our experienced educators.',
+      },
     ],
   },
   {
     href: '/facilities',
     label: 'Facilities',
     submenu: [
-      { href: '/facilities/library', icon: <Library />, label: 'Library', desc: 'Explore thousands of academic resources.' },
-      { href: '/facilities/labs', icon: <GraduationCap />, label: 'Labs & Equipment', desc: 'State-of-the-art lab setups.' },
-      { href: '/facilities/hostel', icon: <Building2 />, label: 'Hostel', desc: 'Safe & spacious hostel life.' },
-      { href: '/facilities/sports', icon: <Medal />, label: 'Sports', desc: 'Campus sports and activities.' },
+      {
+        href: '/facilities/library',
+        icon: <Library />,
+        label: 'Library',
+        desc: 'Explore thousands of academic resources.',
+      },
+      {
+        href: '/facilities/labs',
+        icon: <GraduationCap />,
+        label: 'Labs & Equipment',
+        desc: 'State-of-the-art lab setups.',
+      },
+      {
+        href: '/facilities/hostel',
+        icon: <Building2 />,
+        label: 'Hostel',
+        desc: 'Safe & spacious hostel life.',
+      },
+      {
+        href: '/facilities/sports',
+        icon: <Medal />,
+        label: 'Sports',
+        desc: 'Campus sports and activities.',
+      },
     ],
   },
   { href: '/iqac', label: 'IQAC' },
@@ -69,9 +109,24 @@ export const navMenu: MenuItem[] = [
     href: '/others',
     label: 'Others',
     submenu: [
-      { href: '/others/events', icon: <Presentation />, label: 'Events', desc: 'Annual day, tech fests, cultural events, etc.' },
-      { href: '/others/committees', icon: <Landmark />, label: 'Committees', desc: 'Anti-ragging, Women’s Cell, NSS, etc.' },
-      { href: 'https://20.219.176.203/dengpmt/', icon: <ClipboardList />, label: (<Button>Pay Fees Online</Button>), desc: 'Pay Fees For Existing College Students' },
+      {
+        href: '/others/events',
+        icon: <Presentation />,
+        label: 'Events',
+        desc: 'Annual day, tech fests, cultural events, etc.',
+      },
+      {
+        href: '/others/committees',
+        icon: <Landmark />,
+        label: 'Committees',
+        desc: 'Anti-ragging, Women’s Cell, NSS, etc.',
+      },
+      {
+        href: 'https://20.219.176.203/dengpmt/',
+        icon: <ClipboardList />,
+        label: <Button>Pay Fees Online</Button>,
+        desc: 'Pay Fees For Existing College Students',
+      },
     ],
   },
   { href: '/contact', label: 'Contact' },
@@ -80,8 +135,8 @@ export const navMenu: MenuItem[] = [
 // Hero
 export const heroData = {
   sectionSubtitle: 'Empowering Education',
-  sectionTitle: 'Welcome to DIEMS',
-  decoTitle: 'education',
+  sectionTitle: 'Welcome to ',
+  decoTitle: 'DIEMS',
   sectionText:
     'Discover an institution that nurtures talent, builds future leaders, and fosters innovation in every student.',
 };
@@ -97,15 +152,13 @@ export const featureData = {
       icon: <School size={32} />,
       iconBoxColor: 'bg-blue-600',
       title: 'Accredited Programs',
-      desc: 'Recognized and accredited by top education bodies.',
-      imgSrc: feature1,
+      desc: 'Recognized and accredited by top education bodies of our Country.',
     },
     {
       icon: <Users2 size={32} />,
-      iconBoxColor: 'bg-green-500',
+      iconBoxColor: 'bg-red-500',
       title: 'Experienced Faculty',
       desc: 'A passionate and skilled faculty guiding student success.',
-      imgSrc: feature2,
     },
     {
       icon: <Building2 size={32} />,
@@ -125,7 +178,7 @@ export const featureData = {
 // Process
 export const processData = {
   sectionSubtitle: 'Admissions Process',
-  sectionTitle: 'Steps to Join Our College',
+  sectionTitle: 'Steps to Join DIEMS',
   sectionText:
     'Follow these simple steps to begin your educational journey with us.',
   list: [
@@ -137,7 +190,7 @@ export const processData = {
     {
       icon: <BookOpen size={32} />,
       title: 'Entrance / Merit Review',
-      text: 'Screening through entrance exams or merit-based selection.',
+      text: 'Screening through entrance exams like JEE OR MHT-CET or merit-based selection.',
     },
     {
       icon: <CreditCard size={32} />,
@@ -151,8 +204,7 @@ export const processData = {
 export const overviewData = {
   sectionSubtitle: 'College Snapshot',
   sectionTitle: 'Quick Stats',
-  sectionText:
-    'Here’s a glimpse into our achievements and impact.',
+  sectionText: 'Swipe and have a glimpse into our achievements and impact.',
   listTitle: 'What makes us stand out',
   list: [
     {
@@ -282,12 +334,21 @@ export const footerData = {
       ],
     },
   ],
-  copyright: '© 2024 Your College Name',
+  copyright: '© 2025 DIEMS',
   socialLinks: [
     { href: 'https://x.com/yourcollege', icon: <TwitterIcon size={18} /> },
     { href: 'https://github.com/yourcollege', icon: <GithubIcon size={18} /> },
-    { href: 'https://linkedin.com/school/yourcollege', icon: <LinkedinIcon size={18} /> },
-    { href: 'https://instagram.com/yourcollege', icon: <InstagramIcon size={18} /> },
-    { href: 'https://youtube.com/yourcollege', icon: <YoutubeIcon size={18} /> },
+    {
+      href: 'https://linkedin.com/school/yourcollege',
+      icon: <LinkedinIcon size={18} />,
+    },
+    {
+      href: 'https://instagram.com/yourcollege',
+      icon: <InstagramIcon size={18} />,
+    },
+    {
+      href: 'https://youtube.com/yourcollege',
+      icon: <YoutubeIcon size={18} />,
+    },
   ],
 };

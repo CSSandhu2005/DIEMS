@@ -11,9 +11,9 @@ import brand2 from '@/assets/brand-logo-2.jpg';
 import brand3 from '@/assets/brand-logo-3.jpg';
 import brand4 from '@/assets/brand-logo-4.jpg';
 import brand5 from '@/assets/brand-logo-5.jpg';
-import feature1 from '@/assets/feature-1.png';
-import feature2 from '@/assets/feature-2.png';
-import processBanner from '@/assets/process-banner.png';
+import feature1 from '@/assets/deogiri-college-popup.png';
+import feature2 from '@/assets/image-6.png';
+import processBanner from '@/assets/deogiri-college-popup.png';
 import overviewBanner from '@/assets/overview-banner.png';
 import blog1 from '@/assets/blog-1.jpg';
 import blog2 from '@/assets/blog-2.jpg';
@@ -22,10 +22,19 @@ import avatar1 from '@/assets/avatar-1.jpg';
 import avatar2 from '@/assets/avatar-2.jpg';
 import avatar3 from '@/assets/avatar-3.jpg';
 import ctaBanner from '@/assets/cta-banner.png';
+import achievement1 from "@/assets/achievement-1.jpg" ; 
+import achievement2 from "@/assets/achievement-2.jpg" ; 
+import achievement3 from "@/assets/achievemen-3.jpg" ; 
+import achievement4 from "@/assets/achievement-4.jpg" ; 
+import achievement5 from "@/assets/achievement-5.jpg" ; 
+import achievement6 from "@/assets/achievement-6.jpg" ;
+import achievement7 from "@/assets/achievement-7.jpg" ;
+import achievement8 from "@/assets/achievement-8.jpg" ;   
 
 const brands = [brand1, brand2, brand3, brand4, brand5];
-
+const achievements = [achievement1, achievement2, achievement3, achievement4, achievement5, achievement6, achievement7, achievement8] ; 
 export {
+  achievements , 
   favicon,
   logo,
   heroBanner,

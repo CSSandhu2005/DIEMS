@@ -24,7 +24,7 @@ const Header = () => {
     <header className='h-16 grid grid-cols-1 items-center md:h-20 lg:h-24'>
       <div className='relative container flex items-center justify-between '>
         <Logo />
-        <NavigationMenu className='max-lg:hidden mx-auto'>
+        <NavigationMenu className='max-xl:hidden mx-auto'>
           <NavigationMenuList>
             {navMenu.map(({ href, label, submenu }, index) => (
               <NavigationMenuItem key={index}>
@@ -73,7 +73,7 @@ const Header = () => {
             <Button
               variant='outline'
               size='icon'
-              className='lg:hidden'
+              className='xl:hidden'
             >
               <Menu />
             </Button>

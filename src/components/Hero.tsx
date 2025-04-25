@@ -49,11 +49,11 @@ const Hero = () => {
 
   const scrollYTransform = useTransform(scrollYProgress, [0, 1], [0.85, 1.1]);
 
-    const scale = useSpring(scrollYTransform, {
-        stiffness: 300, 
-        damping: 30 , 
-        restDelta : 0.001, 
-    })
+  const scale = useSpring(scrollYTransform, {
+    stiffness: 300,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
     <section className='py-10 md:py-16'>
@@ -75,10 +75,10 @@ const Hero = () => {
             variants={heroChildVariants}
             className='text-4xl font-semibold !leading-tight mb-3 md:text-5xl md:mb-5 lg:text-6xl'
           >
-            {heroData.sectionTitle}
-            <span className='relative isolate ms-4'>
+            <div>{heroData.sectionTitle}</div>
+            <span className='relative isolate ms-6 p-2 lg:py-1'>
               {heroData.decoTitle}
-              <span className='absolute -z-10 top-2 -left-6 -right-4 bottom-0.5 bg-primary/5 rounded-full px-8 ms-3 border-t border-primary/20 shadow-[inset_0px_0px_30px_0px] shadow-primary/20 md:top-3 md:bottom-1 lg:top-4 lg:bottom-2'></span>
+              <span className='absolute -z-10 top-2 -left-10 -right-6 bottom-0.5 bg-primary/5 rounded-full px-8 ms-3 border-t border-primary/20 shadow-[inset_0px_0px_30px_0px] shadow-primary/20 md:top-3 md:bottom-1 lg:top-4 lg:bottom-2'></span>
             </span>
           </motion.h2>
 
@@ -138,7 +138,7 @@ const Hero = () => {
               ease: 'backInOut',
             }}
             ref={heroBannerRef}
-            style = {{ scale }}
+            style={{ scale }}
           >
             <img
               src={heroBanner}

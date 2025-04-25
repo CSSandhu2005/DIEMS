@@ -8,16 +8,7 @@ import Features from '@/components/Features';
 import Process from '@/components/Process';
 import Overview from './components/Overview';
 import Footer from '@/components/Footer';
-
-const slides = [
-  'src/assets/image-1.png',
-  'src/assets/image-2.png',
-  'src/assets/image-3.png',
-  'src/assets/image-4.png',
-  'src/assets/image-5.png',
-  'src/assets/image-6.png',
-  'src/assets/image-7.png',
-];
+import { images } from '@/assets';
 
 const App = () => {
   return (
@@ -28,7 +19,7 @@ const App = () => {
           <Hero />
           <Brand />
           <div className='overflow-hidden relative rounded-lg mb-10'>
-            <Carousel slides={slides} />
+            <Carousel slides={images} />
           </div>
           {/* <ReactCardSlider/>  */}
           <Features />

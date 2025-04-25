@@ -1,6 +1,7 @@
 import { ReactLenis } from 'lenis/react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Brand from "@/components/Brand" ; 
 const App = () => {
   return (
     <ReactLenis root>
@@ -8,6 +9,7 @@ const App = () => {
         <Header />
         <main>
           <Hero />
+          <Brand />
         </main>
       </div>
     </ReactLenis>

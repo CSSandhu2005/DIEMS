@@ -119,7 +119,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className='relative mt-12 max-w-screen-xl mx-auto isolate md:mt-16'>
+        <div className='relative mt-16 mb-2 max-w-screen-xl mx-auto isolate md:mt-16'>
           <motion.figure
             className='bg-background/60 backdrop-blur-3xl rounded-xl shadow-2xl overflow-hidden'
             initial={{
@@ -149,7 +149,7 @@ const Hero = () => {
           </motion.figure>
 
           <motion.div
-            className='absolute bg-primary inset-5 blur-[50px] -z-10'
+            className='absolute bg-primary inset-5 blur-[50px] -z-50'
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, delay: 0.5, ease: 'backInOut' }}
@@ -158,7 +158,7 @@ const Hero = () => {
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, delay: 1.5, ease: 'backOut' }}
-            className='absolute inset-0 bg-primary blur-[200px] scale-y-75 scale-x-125 rounded-full -z-10 '
+            className='absolute inset-0 bg-primary blur-[200px] scale-y-75 scale-x-125 rounded-full -z-50 '
           ></motion.div>
         </div>
       </motion.div>

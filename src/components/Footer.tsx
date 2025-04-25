@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='container'>
         <div className='grid grid-cols-1 gap-x-2 gap-y-10 lg:grid-cols-4'>
           <Logo />
-          <div className='grid grid-cols-2 gap-x-2 gapy-y-8 text-sm sm:grid-cols-4 lg:col-span-3'>
+          <div className='grid grid-cols-2 gap-x-2 gap-y-8 text-sm sm:grid-cols-4 lg:col-span-3'>
             {footerData.links.map(({ title, items }, index) => (
               <ul key={index}>
                 <p className='mb-4'>{title}</p>

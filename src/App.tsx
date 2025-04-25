@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Brand from "@/components/Brand" ; 
 import Carousel from '@/components/Carousel';
-
+import ReactCardSlider from '@/components/ReactCardSlider';
 
 
 const slides = [
@@ -28,6 +28,7 @@ const App = () => {
           <div className="overflow-hidden relative rounded-lg mb-10">
             <Carousel slides={slides} />
           </div>
+          <ReactCardSlider/>
         </main>
       </div>
     </ReactLenis>

@@ -47,7 +47,7 @@ const Hero = () => {
     offset: ['start 1080px', '50% start'],
   });
 
-  const scrollYTransform = useTransform(scrollYProgress, [0, 1], [0.85, 1.3]);
+  const scrollYTransform = useTransform(scrollYProgress, [0, 1], [0.85, 1.1]);
 
     const scale = useSpring(scrollYTransform, {
         stiffness: 300, 

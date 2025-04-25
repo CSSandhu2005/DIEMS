@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ChevronLeftCircle, ChevronRightCircle } from "lucide-react";
+import { useState } from 'react';
+import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react';
 
 interface CarouselProps {
   slides: string[];
@@ -17,38 +17,51 @@ export default function Carousel({ slides }: CarouselProps) {
   };
 
   return (
-    <div className="overflow-hidden relative border border-sky-400 shadow-lg shadow-sky-200 rounded-lg">
-      <div
-        className={`flex transition-transform ease-out duration-500`}
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {slides.map((s, index) => (
-          <img key={index} src={s} className="w-full flex-shrink-0" />
-        ))}
-      </div>
+    <>
+      <div className="text-center mb-3 text-3xl lg:text-4xl"><h1>Latest College Updates</h1></div>
+      <div className='overflow-hidden relative shadow-lg rounded-lg'>
+        <div
+          className={`flex transition-transform ease-out duration-500`}
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {slides.map((s, index) => (
+            <img
+              key={index}
+              src={s}
+              className='w-full flex-shrink-0 object-cover'
+            />
+          ))}
+        </div>
 
-      {/* Navigation Arrows */}
-      <div className="absolute top-0 h-full w-full flex justify-between items-center px-4 text-white">
-        <button onClick={previousSlide}>
-          <ChevronLeftCircle size={36} strokeWidth={2.5} />
-        </button>
-        <button onClick={nextSlide}>
-          <ChevronRightCircle size={36} strokeWidth={2.5} />
-        </button>
-      </div>
+        {/* Navigation Arrows */}
+        <div className='absolute top-0 h-full w-full flex justify-between items-center text-white px-2 md:px-4'>
+          <button onClick={previousSlide}>
+            <ChevronLeftCircle
+              size={36}
+              strokeWidth={2.5}
+            />
+          </button>
+          <button onClick={nextSlide}>
+            <ChevronRightCircle
+              size={36}
+              strokeWidth={2.5}
+            />
+          </button>
+        </div>
 
-      {/* Indicator Dots */}
-      <div className="absolute bottom-4 flex justify-center gap-3 w-full">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-4 h-4 rounded-full cursor-pointer ${
-              i === current ? "bg-white" : "bg-gray-500"
-            }`}
-          />
-        ))}
+        {/* Indicator Dots */}
+        <div className='absolute bottom-4 flex justify-start px-2 gap-3 w-full md:p-4'>
+          {slides.map((_, i) => (
+            <div
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-4 h-4 rounded-full cursor-pointer ${
+                i === current ? 'bg-primary' : 'bg-gray-500'
+              }`}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

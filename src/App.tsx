@@ -25,7 +25,7 @@ const App = () => {
         <main>
           <Hero />
           <Brand />
-          <div className="overflow-hidden relative border border-sky-400 shadow-lg shadow-sky-200 rounded-lg">
+          <div className="overflow-hidden relative rounded-lg mb-10">
             <Carousel slides={slides} />
           </div>
         </main>

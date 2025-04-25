@@ -5,7 +5,7 @@
 
 import favicon from '@/assets/favicon.ico';
 import logo from '@/assets/logo.png';
-import heroBanner from '@/assets/hero-banner.png';
+import heroBanner from '@/assets/heroBanner.png';
 import brand1 from '@/assets/brand-logo-1.svg';
 import brand2 from '@/assets/brand-logo-2.svg';
 import brand3 from '@/assets/brand-logo-3.svg';

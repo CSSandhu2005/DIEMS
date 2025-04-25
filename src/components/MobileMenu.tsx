@@ -5,7 +5,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
-
+import React from 'react';
 import { ChevronsUpDown } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
@@ -29,17 +29,24 @@ const MobileMenu = ({ navMenu }: MobileMenuProps) => {
                     </CollapsibleTrigger>
 
                     <CollapsibleContent className="ps-2">
-                        <ul className="border-l border-l-muted-foreground/20">
-                            {
-                                submenu.map(({href, label}, index) => (
-                                    <li key={index}>
-                                        <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:bg-transparent">
-                                            <a href={href}>{label}</a>
-                                        </Button>
-                                    </li>
-                                ))
-                            }
-                        </ul>
+                    <ul className="border-l border-l-muted-foreground/20">
+                    {submenu.map(({ href, label }, index) => {
+                      if (React.isValidElement(label)) {
+                        return null;
+                      }
+
+                      return (
+                        <li key={index}>
+                          <Button
+                            variant="ghost"
+                            className="w-full justify-start text-muted-foreground hover:bg-transparent"
+                          >
+                            <a href={href}>{label}</a>
+                          </Button>
+                        </li>
+                      );
+                    })}
+                  </ul>
                     </CollapsibleContent>
                 </Collapsible>
             ) : (
@@ -57,10 +64,10 @@ const MobileMenu = ({ navMenu }: MobileMenuProps) => {
 
       <Separator className="bg-muted-foreground/20"/>
 
-      <div className="">
+      <div className="mt-2">
         <div>
-            <Button variant="ghost">
-
+            <Button className="w-full">
+                Pay Fees Online
             </Button>
         </div>
       </div>

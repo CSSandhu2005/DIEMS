@@ -14,8 +14,8 @@ type MenuItem = {
   type SubmenuItem = {
     href: string;
     icon: JSX.Element;
-    label: string;
-    desc: string;
+    label: string | JSX.Element;
+    desc: string | JSX.Element;
   }
   
   export type { MenuItem };

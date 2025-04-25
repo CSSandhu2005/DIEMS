@@ -3,6 +3,9 @@
      darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
+	fontFamily : {
+		sans: ["Poppins", "Helvetica", "Arial", "sans-serif"]
+	}, 
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',

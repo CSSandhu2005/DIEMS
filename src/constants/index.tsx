@@ -4,6 +4,7 @@
  */
 
 import { MenuItem } from '@/types';
+import { Button } from '@/components/ui/button';
 
 // Lucide Icons
 import {
@@ -70,6 +71,7 @@ export const navMenu: MenuItem[] = [
     submenu: [
       { href: '/others/events', icon: <Presentation />, label: 'Events', desc: 'Annual day, tech fests, cultural events, etc.' },
       { href: '/others/committees', icon: <Landmark />, label: 'Committees', desc: 'Anti-ragging, Women’s Cell, NSS, etc.' },
+      { href: 'https://20.219.176.203/dengpmt/', icon: <ClipboardList />, label: (<Button>Pay Fees Online</Button>), desc: 'Pay Fees For Existing College Students' },
     ],
   },
   { href: '/contact', label: 'Contact' },
@@ -78,7 +80,7 @@ export const navMenu: MenuItem[] = [
 // Hero
 export const heroData = {
   sectionSubtitle: 'Empowering Education',
-  sectionTitle: 'Welcome to Our College',
+  sectionTitle: 'Welcome to DIEMS',
   decoTitle: 'education',
   sectionText:
     'Discover an institution that nurtures talent, builds future leaders, and fosters innovation in every student.',

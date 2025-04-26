@@ -41,19 +41,19 @@ const Contact = () => {
           </p>
 
           <div className="flex space-x-4 mt-8">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/gdscdiems" target="_blank" rel="noopener noreferrer">
               <Twitter size={20} className="text-white" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/deogiri-institute-of-engineering-&-management-studies-aurangabad/about/" target="_blank" rel="noopener noreferrer">
               <Linkedin size={20} className="text-white" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/DIEMS.Auranagabad/" target="_blank" rel="noopener noreferrer">
               <Facebook size={20} className="text-white" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/official_diems/" target="_blank" rel="noopener noreferrer">
               <Instagram size={20} className="text-white" />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/c/DeogiriInstituteofEngineeringandManagement" target="_blank" rel="noopener noreferrer">
               <Youtube size={20} className="text-white" />
             </a>
           </div>

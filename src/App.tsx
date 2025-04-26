@@ -6,7 +6,8 @@ import Carousel from '@/components/Carousel';
 // import ReactCardSlider from '@/components/ReactCardSlider';
 import Features from '@/components/Features';
 import Process from '@/components/Process';
-import Overview from './components/Overview';
+import Overview from '@/components/Overview';
+import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { images } from '@/assets';
 
@@ -25,7 +26,9 @@ const App = () => {
           <Features />
           <Process />
           <Overview />
+          <Contact/>
         </main>
+        
         <Footer />
       </div>
     </ReactLenis>

@@ -1,4 +1,6 @@
 import { ReactLenis } from 'lenis/react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Brand from '@/components/Brand';
@@ -9,27 +11,52 @@ import Process from '@/components/Process';
 import Overview from '@/components/Overview';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import About from '@/components/About';
 import { images } from '@/assets';
+
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Brand />
+        <div className='overflow-hidden relative rounded-lg mb-10'>
+          <Carousel slides={images} />
+        </div>
+        {/* <ReactCardSlider /> */}
+        <Features />
+        <Process />
+        <Overview />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/about',
+    element: (
+      <>
+        <Header />
+        <About />
+        <Footer />
+      </>
+    ),
+  },
+]);
 
 const App = () => {
   return (
     <ReactLenis root>
       <div className='relative isolate overflow-hidden'>
-        <Header />
-        <main>
-          <Hero />
-          <Brand />
-          <div className='overflow-hidden relative rounded-lg mb-10'>
-            <Carousel slides={images} />
-          </div>
-          {/* <ReactCardSlider/>  */}
-          <Features />
-          <Process />
-          <Overview />
-          <Contact/>
-        </main>
-        
-        <Footer />
+        <RouterProvider router={router} />
       </div>
     </ReactLenis>
   );

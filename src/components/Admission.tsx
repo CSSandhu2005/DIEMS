@@ -126,7 +126,7 @@ const Admission = () => {
               </p>
             </motion.div>
           </div>
-        </div>
+        </div>  
       </div>
 
       {/* Direct Second Year Admissions */}
@@ -223,7 +223,10 @@ const Admission = () => {
           </div>
         </div>
       </div>
+      
     </section>
+
+  
   );
 };
 

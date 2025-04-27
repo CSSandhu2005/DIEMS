@@ -13,6 +13,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import About from '@/components/About';
 import Admission from '@/components/Admission';
+import ContactPage from '@/components/ContactPage';
 import { images } from '@/assets';
 
 const Home = () => {
@@ -57,6 +58,16 @@ const router = createBrowserRouter([
       <>
         <Header />
          <Admission/>
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: '/contact',
+    element: (
+      <>
+        <Header />
+         <ContactPage/>
         <Footer />
       </>
     ),

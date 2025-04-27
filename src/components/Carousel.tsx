@@ -34,7 +34,7 @@ export default function Carousel({ slides }: CarouselProps) {
         </div>
 
         {/* Navigation Arrows */}
-        <div className='absolute top-0 h-full w-full flex justify-between items-center text-white px-2 md:px-4'>
+        <div className='absolute top-0 h-full w-full flex justify-between items-center text-[#101F28] px-2 md:px-4'>
           <button onClick={previousSlide}>
             <ChevronLeftCircle
               size={36}
@@ -55,8 +55,8 @@ export default function Carousel({ slides }: CarouselProps) {
             <div
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-4 h-4 rounded-full cursor-pointer ${
-                i === current ? 'bg-primary' : 'bg-gray-500'
+              className={`w-3 h-3 rounded-full cursor-pointer ${
+                i === current ? 'bg-primary' : 'bg-gray-600'
               }`}
             />
           ))}

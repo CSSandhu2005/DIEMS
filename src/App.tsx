@@ -12,6 +12,7 @@ import Overview from '@/components/Overview';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import About from '@/components/About';
+import Admission from '@/components/Admission';
 import { images } from '@/assets';
 
 const Home = () => {
@@ -46,6 +47,16 @@ const router = createBrowserRouter([
       <>
         <Header />
         <About />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: '/admission',
+    element: (
+      <>
+        <Header />
+         <Admission/>
         <Footer />
       </>
     ),

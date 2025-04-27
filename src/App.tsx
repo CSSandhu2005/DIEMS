@@ -52,7 +52,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const App = () => {
+const App = () => { 
   return (
     <ReactLenis root>
       <div className='relative isolate overflow-hidden'>

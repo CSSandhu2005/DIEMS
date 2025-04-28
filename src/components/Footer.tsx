@@ -1,5 +1,6 @@
 import Logo from '@/components/Logo';
 import { footerData } from '@/constants';
+
 const Footer = () => {
   return (
     <footer className='section !pb-0'>
@@ -37,19 +38,12 @@ const Footer = () => {
             {footerData.copyright}
           </a>
 
-          <div className='social-wrapper'>
-            <ul className='flex gap-5'>
-              {footerData.socialLinks.map(({ href, icon }, index) => (
-                <li key={index}>
-                  <a
-                    href={href}
-                    target='_blank'
-                  >
-                    {icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Removed social icons and added the new line */}
+          <div className='text-sm text-end'>
+            <span>Developed by </span>
+            <span className='font-semibold text-primary'>Ashish Rathi</span>
+            <span> & </span>
+            <span className='font-semibold text-primary'>Chiranjeev Singh Sandhu  </span>(SY-CSE-A)
           </div>
         </div>
       </div>

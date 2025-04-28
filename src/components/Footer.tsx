@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex justify-between mt-12 border-t border-gray-600/10 py-6'>
+        <div className='text-sm text-center mt-12 border-t border-gray-600/10 py-6'>
           <a
             href='https://www.youtube.com/@deogiriinstituteofengineer4233'
             target='_blank'
@@ -37,14 +37,29 @@ const Footer = () => {
           >
             {footerData.copyright}
           </a>
-
-          {/* Removed social icons and added the new line */}
-          <div className='text-sm text-end'>
+          <p className='mt-1'>
             <span>Developed by </span>
-            <span className='font-semibold text-primary'>Ashish Rathi</span>
+            <span className='font-semibold text-primary'>
+              <a
+                href='https://www.linkedin.com/in/ashish-rathi-a52749298/'
+                target='_blank'
+                className=''
+              >
+                Ashish Rathi
+              </a>
+            </span>
             <span> & </span>
-            <span className='font-semibold text-primary'>Chiranjeev Singh Sandhu  </span>(SY-CSE-A)
-          </div>
+            <span className='font-semibold text-primary'>
+              <a
+                href='https://www.linkedin.com/in/chiranjeev-singh-sandhu/'
+                target='_blank'
+                className=''
+              >
+                Chiranjeev Singh Sandhu
+              </a>
+            </span>
+            (SY-CSE-A)
+          </p>
         </div>
       </div>
     </footer>

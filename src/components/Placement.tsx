@@ -75,7 +75,7 @@ const Placement: React.FC = () => {
   return (
     <section className='py-5 md:py-10'>
       <div className='container text-center'>
-        <div className='max-w-screen-md mx-auto'>
+        <div className='max-w-7xl mx-auto'>
           <h2 className='text-2xl font-semibold mb-3 md:text-3xl lg:text-4xl xl:text-5xl'>
             Training & Placements Cell
           </h2>
@@ -100,7 +100,7 @@ const Placement: React.FC = () => {
               <p>Message from Dean Training & Placements</p>
               <button
                 onClick={() => handleButtonClick(DeanMessage)}
-                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition lg:w-full'
+                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition'
               >
                 View
               </button>
@@ -110,7 +110,7 @@ const Placement: React.FC = () => {
               <p>Message from Training & Placements Officer</p>
               <button
                 onClick={() => handleButtonClick(TPOMessage)} // Same image for now
-                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition lg:w-full'
+                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition'
               >
                 View
               </button>
@@ -119,7 +119,7 @@ const Placement: React.FC = () => {
             <div className='p-5 border rounded-xl shadow-primary shadow-sm backdrop-blur-xl'>
               <p>Placements of our Students</p>
               <button
-                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition lg:w-full'
+                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition'
               >
                 View
               </button>
@@ -128,7 +128,7 @@ const Placement: React.FC = () => {
             <div className='p-5 border rounded-xl shadow-primary shadow-sm backdrop-blur-xl'>
               <p>Placements Policy</p>
               <button
-                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition lg:w-full'
+                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition'
               >
                 View
               </button>
@@ -137,7 +137,7 @@ const Placement: React.FC = () => {
             <div className='p-5 border rounded-xl shadow-primary shadow-sm backdrop-blur-xl'>
               <p>Internship Policy</p>
               <button
-                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition lg:w-full'
+                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition '
               >
                 View
               </button>
@@ -146,7 +146,7 @@ const Placement: React.FC = () => {
             <div className='p-5 border rounded-xl shadow-primary shadow-sm backdrop-blur-xl'>
               <p>Gallery</p>
               <button
-                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition lg:w-full'
+                className='mt-4 bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition'
               >
                 View
               </button>

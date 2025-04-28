@@ -14,6 +14,7 @@ import Footer from '@/components/Footer';
 import About from '@/components/About';
 import Admission from '@/components/Admission';
 import ContactPage from '@/components/ContactPage';
+import Placement from '@/components/Placement';
 import { images } from '@/assets';
 
 const Home = () => {
@@ -68,6 +69,16 @@ const router = createBrowserRouter([
       <>
         <Header />
          <ContactPage/>
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: '/placements',
+    element: (
+      <>
+        <Header />
+         <Placement/>
         <Footer />
       </>
     ),

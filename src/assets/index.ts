@@ -38,6 +38,7 @@ import achievement6 from "@/assets/achievement-6.jpg" ;
 import achievement7 from "@/assets/achievement-7.jpg" ;
 import achievement8 from "@/assets/achievement-8.jpg" ;   
 
+
 const brands = [brand1, brand2, brand3, brand4, brand5];
 const achievements = [achievement1, achievement2, achievement3, achievement4, achievement5, achievement6, achievement7, achievement8] ; 
 const images = [image1, image2, image3, image4, image5, image6, image7] ; 

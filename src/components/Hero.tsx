@@ -4,15 +4,12 @@ import { heroBanner } from '@/assets';
 import { CirclePlay } from 'lucide-react';
 import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import ReactPlayer from 'react-player/youtube';
-import {
-  motion,
-  Variants,
-  useScroll,
-  useSpring,
-  useTransform,
-} from 'motion/react';
-import { useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
+import dynamic from 'next/dynamic';
+import { motion, Variants, useScroll, useSpring, useTransform } from 'framer-motion';
+
+// Dynamically import ReactPlayer to lazy-load the component only when needed
+const ReactPlayerLazy = dynamic(() => import('react-player/youtube'), { ssr: false });
 
 const heroVariant: Variants = {
   start: {},
@@ -41,7 +38,9 @@ const heroChildVariants: Variants = {
 };
 
 const Hero = () => {
+  const [isDialogOpen, setDialogOpen] = useState(false);
   const heroBannerRef = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: heroBannerRef,
     offset: ['start 1080px', '50% start'],
@@ -54,6 +53,11 @@ const Hero = () => {
     damping: 30,
     restDelta: 0.001,
   });
+
+  // Lazy load ReactPlayer only when dialog is opened
+  const handleDialogToggle = useCallback(() => {
+    setDialogOpen(prev => !prev);
+  }, []);
 
   return (
     <section className='py-10 md:py-16'>
@@ -94,25 +98,27 @@ const Hero = () => {
             className='flex justify-center gap-2 mt-6 md:mt-10'
           >
             <Button>DIEMS Admission</Button>
-            <Dialog>
+            <Dialog open={isDialogOpen} onOpenChange={setDialogOpen}>
               <DialogTrigger asChild>
-                <Button variant='ghost'>
+                <Button variant='ghost' onClick={handleDialogToggle}>
                   <CirclePlay />
                   College Campus
                 </Button>
               </DialogTrigger>
 
-              <DialogContent className='p-0 overflow-hidden max-w-[640px] xl:max-w-[1000px] '>
+              <DialogContent className='p-0 overflow-hidden max-w-[640px] xl:max-w-[1000px]'>
                 <AspectRatio ratio={16 / 9}>
-                  <ReactPlayer
-                    url='https://www.youtube.com/watch?v=iS5pw1Gv9UU'
-                    style={{
-                      minWidth: '100%',
-                      maxWidth: '100%',
-                      minHeight: '100%',
-                      maxHeight: '100%',
-                    }}
-                  />
+                  {isDialogOpen && (
+                    <ReactPlayerLazy
+                      url='https://www.youtube.com/watch?v=iS5pw1Gv9UU'
+                      style={{
+                        minWidth: '100%',
+                        maxWidth: '100%',
+                        minHeight: '100%',
+                        maxHeight: '100%',
+                      }}
+                    />
+                  )}
                 </AspectRatio>
               </DialogContent>
             </Dialog>
@@ -145,6 +151,8 @@ const Hero = () => {
               alt='Hero Banner'
               width={1468}
               height={815}
+              className="w-full h-auto"
+              loading="lazy"
             />
           </motion.figure>
 
@@ -158,7 +166,7 @@ const Hero = () => {
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, delay: 1.5, ease: 'backOut' }}
-            className='absolute inset-0 bg-primary blur-[200px] scale-y-75 scale-x-125 rounded-full -z-50 '
+            className='absolute inset-0 bg-primary blur-[200px] scale-y-75 scale-x-125 rounded-full -z-50'
           ></motion.div>
         </div>
       </motion.div>

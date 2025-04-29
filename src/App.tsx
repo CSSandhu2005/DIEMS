@@ -16,6 +16,18 @@ import Admission from '@/components/Admission';
 import ContactPage from '@/components/ContactPage';
 import Placement from '@/components/Placement';
 import { images } from '@/assets';
+import Courses from './components/Courses';
+import Syllabus from './components/Syllabus';
+import Departments from './components/Departments';
+import Sports from './components/Sports';
+import Faculty from './components/Faculty';
+import IQAC from './components/IQAC';
+import LibraryPage from './components/LibraryPage';
+import LabsAndEquipmentPage from './components/Labs';
+import HostelPage from './components/Hostel';
+import NIRFPage from './components/NIRF';
+import CommitteePage from './components/Committee';
+import EventsPage from './components/Events';
 
 const Home = () => {
   return (
@@ -83,6 +95,113 @@ const router = createBrowserRouter([
       </>
     ),
   },
+  {
+    path: '/academics/courses' , 
+    element : (
+      <>
+        <Header />
+        <Courses />
+        <Footer />
+      </>
+    )
+  }, { 
+    path: '/academics/syllabus', 
+    element: ( 
+      <> 
+        <Header />
+        <Syllabus />
+        <Footer /> 
+      </>
+    )
+  }, { 
+    path: "academics/departments", 
+    element: (
+      <>
+      <Header />
+      <Departments />
+      <Footer />
+      </>
+    )
+  }, {
+    path: "facilities/sports" , 
+    element: ( <>
+      <Header />
+      <Sports />
+      <Footer />
+    </>)
+  }, {
+    path: "/academics/faculty" , 
+    element: ( 
+      <>
+      <Header />
+      <Faculty />
+      <Footer />
+      </>
+    )
+  }, { 
+    path: "iqac", 
+    element: (
+      <>
+        <Header />
+        <IQAC />
+        <Footer />
+      </>
+    )
+  } , { 
+    path: "/facilities/library" , 
+    element: ( 
+      <> 
+        <Header />
+        <LibraryPage />
+        <Footer />
+      </>
+    )
+  } , {
+    path: "/facilities/labs" , 
+    element: ( 
+      <>
+        <Header />
+        <LabsAndEquipmentPage />
+        <Footer />
+      </>
+    )
+  } , { 
+    path: "/facilities/hostel", 
+    element: (
+      <>
+        <Header /> 
+        <HostelPage />
+        <Footer />
+      </>
+    )
+  } , {
+    path: "/nirf", 
+    element: (
+      <>
+        <Header />
+        <NIRFPage />
+        <Footer />
+      </>
+    )
+  } , {
+    path: "/others/committees" , 
+    element: (
+      <>
+        <Header />
+        <CommitteePage />
+        <Footer />
+      </>
+    )
+  }, {
+    path: "/others/events" , 
+    element: (
+      <>
+        <Header />
+        <EventsPage />
+        <Footer />
+      </>
+    )
+  }
 ]);
 
 const App = () => { 

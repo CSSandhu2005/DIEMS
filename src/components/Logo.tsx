@@ -7,7 +7,7 @@ type LogoProps = {
 const Logo = ({ variant = 'default' }: LogoProps) => {
   return (
     <a
-      href=''
+      href='/'
       className=''
     >
       {variant === 'default' && (

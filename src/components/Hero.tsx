@@ -79,10 +79,10 @@ const Hero = () => {
         animate="end"
         className="container text-center"
       >
-        <div className="max-w-screen-md mx-auto">
+        <div className="max-w-screen-md mx-auto flex flex-col items-center">
           <motion.p
             variants={prefersReducedMotion || isMobile ? {} : heroChildVariants} // Disable animations on mobile/reduced motion
-            className="text-sm uppercase tracking-wider bg-accent/50 text-secondary-foreground max-w-max mx-auto px-3 py-1 rounded-full border-t border-blue-500/10 backdrop-blur-3xl mb-6 md:mb-10"
+            className="text-sm uppercase tracking-wider bg-accent/50 text-secondary-foreground max-w-max mx-auto px-6 py-2 rounded-full border-t border-blue-500/10 backdrop-blur-3xl mb-6 md:mb-10"
           >
             {heroData.sectionSubtitle}
           </motion.p>
@@ -92,7 +92,7 @@ const Hero = () => {
             className="text-4xl font-semibold !leading-tight mb-3 md:text-5xl md:mb-5 lg:text-6xl"
           >
             <div>{heroData.sectionTitle}</div>
-            <span className="relative isolate ms-6 p-2 lg:py-1">
+            <span className="relative isolate p-2 lg:py-1">
               {heroData.decoTitle}
               <span className="absolute -z-10 top-2 -left-10 -right-6 bottom-0.5 bg-primary/5 rounded-full px-8 ms-3 border-t border-primary/20 shadow-[inset_0px_0px_30px_0px] shadow-primary/20 md:top-3 md:bottom-1 lg:top-4 lg:bottom-2"></span>
             </span>
@@ -107,7 +107,7 @@ const Hero = () => {
 
           <motion.div
             variants={prefersReducedMotion || isMobile ? {} : heroChildVariants}
-            className="flex justify-center gap-2 mt-6 z-40 md:mt-10 flex-col md:flex-row lg:flex-row"
+            className="flex w-full justify-between mt-6 z-40 md:mt-10 flex-col md:flex-row lg:flex-row gap-4"
           >
             <Button>DIEMS Admission</Button>
             {/* Dialog Button */}
@@ -137,9 +137,9 @@ const Hero = () => {
             </Dialog>
 
             {/* Pop-Up Image Button */}
-            <Button variant="outline" onClick={handleImagePopUpToggle}>
+            <Button variant="destructive" onClick={handleImagePopUpToggle}>
               <Building />
-              DIEMS Accreditations
+              Accreditations
             </Button>
           </motion.div>
         </div>

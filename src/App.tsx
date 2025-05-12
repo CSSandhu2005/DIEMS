@@ -1,216 +1,199 @@
+// src/App.tsx
 import { ReactLenis } from 'lenis/react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Brand from '@/components/Brand';
 import Carousel from '@/components/Carousel';
-// import ReactCardSlider from '@/components/ReactCardSlider';
 import Features from '@/components/Features';
 import Process from '@/components/Process';
 import Overview from '@/components/Overview';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 import About from '@/components/About';
 import Admission from '@/components/Admission';
 import ContactPage from '@/components/ContactPage';
 import Placement from '@/components/Placement';
+import Courses from '@/components/Courses';
+import Syllabus from '@/components/Syllabus';
+import Departments from '@/components/Departments';
+import Sports from '@/components/Sports';
+import Faculty from '@/components/Faculty';
+import IQAC from '@/components/IQAC';
+import LibraryPage from '@/components/LibraryPage';
+import LabsAndEquipmentPage from '@/components/Labs';
+import HostelPage from '@/components/Hostel';
+import NIRFPage from '@/components/NIRF';
+import CommitteePage from '@/components/Committee';
+import EventsPage from '@/components/Events';
 import { images } from '@/assets';
-import Courses from './components/Courses';
-import Syllabus from './components/Syllabus';
-import Departments from './components/Departments';
-import Sports from './components/Sports';
-import Faculty from './components/Faculty';
-import IQAC from './components/IQAC';
-import LibraryPage from './components/LibraryPage';
-import LabsAndEquipmentPage from './components/Labs';
-import HostelPage from './components/Hostel';
-import NIRFPage from './components/NIRF';
-import CommitteePage from './components/Committee';
-import EventsPage from './components/Events';
+import { ThemeProvider } from '@/components/theme-provider';
+import Layout from '@/components/Layout';
 
-const Home = () => {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Brand />
-        <div className='overflow-hidden relative rounded-lg mb-10'>
-          <Carousel slides={images} />
-        </div>
-        {/* <ReactCardSlider /> */}
-        <Features />
-        <Process />
-        <Overview />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
-};
+const Home = () => (
+  <>
+    <Hero />
+    <Brand />
+    <div className='overflow-hidden relative rounded-lg mb-10'>
+      <Carousel slides={images} />
+    </div>
+    <Features />
+    <Process />
+    <Overview />
+    <Contact />
+  </>
+);
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: (
+      <Layout>
+        <Home />
+      </Layout>
+    ),
   },
   {
     path: '/about',
     element: (
-      <>
-        <Header />
+      <Layout>
         <About />
-        <Footer />
-      </>
+      </Layout>
     ),
   },
   {
     path: '/admission',
     element: (
-      <>
-        <Header />
-         <Admission/>
-        <Footer />
-      </>
+      <Layout>
+        <Admission />
+      </Layout>
     ),
   },
   {
     path: '/contact',
     element: (
-      <>
-        <Header />
-         <ContactPage/>
-        <Footer />
-      </>
+      <Layout>
+        <ContactPage />
+      </Layout>
     ),
   },
   {
     path: '/placements',
     element: (
-      <>
-        <Header />
-         <Placement/>
-        <Footer />
-      </>
+      <Layout>
+        <Placement />
+      </Layout>
     ),
   },
   {
-    path: '/academics/courses' , 
-    element : (
-      <>
-        <Header />
+    path: '/academics/courses',
+    element: (
+      <Layout>
         <Courses />
-        <Footer />
-      </>
-    )
-  }, { 
-    path: '/academics/syllabus', 
-    element: ( 
-      <> 
-        <Header />
+      </Layout>
+    ),
+  },
+  {
+    path: '/academics/syllabus',
+    element: (
+      <Layout>
         <Syllabus />
-        <Footer /> 
-      </>
-    )
-  }, { 
-    path: "academics/departments", 
+      </Layout>
+    ),
+  },
+  {
+    path: '/academics/departments',
     element: (
-      <>
-      <Header />
-      <Departments />
-      <Footer />
-      </>
-    )
-  }, {
-    path: "facilities/sports" , 
-    element: ( <>
-      <Header />
-      <Sports />
-      <Footer />
-    </>)
-  }, {
-    path: "/academics/faculty" , 
-    element: ( 
-      <>
-      <Header />
-      <Faculty />
-      <Footer />
-      </>
-    )
-  }, { 
-    path: "iqac", 
+      <Layout>
+        <Departments />
+      </Layout>
+    ),
+  },
+  {
+    path: '/facilities/sports',
     element: (
-      <>
-        <Header />
+      <Layout>
+        <Sports />
+      </Layout>
+    ),
+  },
+  {
+    path: '/academics/faculty',
+    element: (
+      <Layout>
+        <Faculty />
+      </Layout>
+    ),
+  },
+  {
+    path: '/iqac',
+    element: (
+      <Layout>
         <IQAC />
-        <Footer />
-      </>
-    )
-  } , { 
-    path: "/facilities/library" , 
-    element: ( 
-      <> 
-        <Header />
+      </Layout>
+    ),
+  },
+  {
+    path: '/facilities/library',
+    element: (
+      <Layout>
         <LibraryPage />
-        <Footer />
-      </>
-    )
-  } , {
-    path: "/facilities/labs" , 
-    element: ( 
-      <>
-        <Header />
+      </Layout>
+    ),
+  },
+  {
+    path: '/facilities/labs',
+    element: (
+      <Layout>
         <LabsAndEquipmentPage />
-        <Footer />
-      </>
-    )
-  } , { 
-    path: "/facilities/hostel", 
+      </Layout>
+    ),
+  },
+  {
+    path: '/facilities/hostel',
     element: (
-      <>
-        <Header /> 
+      <Layout>
         <HostelPage />
-        <Footer />
-      </>
-    )
-  } , {
-    path: "/nirf", 
+      </Layout>
+    ),
+  },
+  {
+    path: '/nirf',
     element: (
-      <>
-        <Header />
+      <Layout>
         <NIRFPage />
-        <Footer />
-      </>
-    )
-  } , {
-    path: "/others/committees" , 
+      </Layout>
+    ),
+  },
+  {
+    path: '/others/committees',
     element: (
-      <>
-        <Header />
+      <Layout>
         <CommitteePage />
-        <Footer />
-      </>
-    )
-  }, {
-    path: "/others/events" , 
+      </Layout>
+    ),
+  },
+  {
+    path: '/others/events',
     element: (
-      <>
-        <Header />
+      <Layout>
         <EventsPage />
-        <Footer />
-      </>
-    )
-  }
+      </Layout>
+    ),
+  },
 ]);
 
-const App = () => { 
+const App: React.FC = () => {
   return (
-    <ReactLenis root>
-      <div className='relative isolate overflow-hidden'>
-        <RouterProvider router={router} />
-      </div>
-    </ReactLenis>
+    <ThemeProvider
+      defaultTheme='dark'
+      storageKey='vite-ui-theme'
+    >
+      <ReactLenis root>
+        <div className='relative isolate overflow-hidden'>
+          <RouterProvider router={router} />
+        </div>
+      </ReactLenis>
+    </ThemeProvider>
   );
 };
 

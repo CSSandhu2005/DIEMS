@@ -5,6 +5,7 @@
 
 import { MenuItem } from '@/types';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/mode-toggle';
 
 // Lucide Icons
 import {
@@ -130,6 +131,10 @@ export const navMenu: MenuItem[] = [
     ],
   },
   { href: '/contact', label: 'Contact' },
+  {
+    href: '#', 
+    label: <ModeToggle />
+  }
 ];
 
 // Hero

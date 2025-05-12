@@ -67,7 +67,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="flex-1"
         >
-          <form onSubmit={handleSubmit} className="space-y-4 border border-[#254B88] p-6 rounded-lg shadow-[0_0_30px_#33CCFF30] bg-[#0b0f19]">
+          <form onSubmit={handleSubmit} className="space-y-4 border border-[#254B88] p-6 rounded-lg shadow-[0_0_30px_#33CCFF30]">
             <input
               type="text"
               id="name"

@@ -66,8 +66,8 @@ const MobileMenu = ({ navMenu }: MobileMenuProps) => {
 
       <div className="mt-2">
         <div>
-            <Button className="w-full">
-                Pay Fees Online
+            <Button className="w-full" >
+              <a href="https://20.219.176.203/dengpmt/">Pay Fees Online</a>
             </Button>
         </div>
       </div>

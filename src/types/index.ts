@@ -7,7 +7,7 @@ import { JSX } from "react";
 
 type MenuItem = {
     href: string;
-    label: string;
+    label: string | JSX.Element;
     submenu?: SubmenuItem[]
   };
   

@@ -67,7 +67,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="flex-1"
         >
-          <form onSubmit={handleSubmit} className="space-y-4 border border-[#254B88] p-6 rounded-lg shadow-[0_0_30px_#33CCFF30]">
+          <form onSubmit={handleSubmit} className="space-y-4 border border-primary p-6 rounded-lg shadow-[0_0_30px_#33CCFF30]">
             <input
               type="text"
               id="name"
@@ -75,7 +75,7 @@ const Contact = () => {
               placeholder="Full Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-[#254B88] rounded-md bg-transparent text-white placeholder-[#848E98]"
+              className="w-full px-4 py-2 border border-primary rounded-md bg-transparent placeholder-[#848E98]"
               required
             />
             <input
@@ -85,7 +85,7 @@ const Contact = () => {
               placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-[#254B88] rounded-md bg-transparent text-white placeholder-[#848E98]"
+              className="w-full px-4 py-2 border border-primary rounded-md bg-transparent  placeholder-[#848E98]"
               required
             />
             <input
@@ -95,7 +95,7 @@ const Contact = () => {
               placeholder="Mobile Number"
               value={formData.mobile}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-[#254B88] rounded-md bg-transparent text-white placeholder-[#848E98]"
+              className="w-full px-4 py-2 border border-primary rounded-md bg-transparent placeholder-[#848E98]"
               required
             />
             <textarea
@@ -104,13 +104,13 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-[#254B88] rounded-md bg-transparent text-white placeholder-[#848E98]"
+              className="w-full px-4 py-2 border border-primary rounded-md bg-transparent placeholder-[#848E98]"
               rows={3}
               required
             />
             <button
               type="submit"
-              className="w-full py-2 bg-[#33CCFF] text-white text-base font-semibold rounded-md hover:bg-[#00bdfc] transition"
+              className="w-full py-2 bg-primary text-white text-base font-semibold rounded-md hover:bg-[#00bdfc] transition hover:text-black"
             >
               Submit
             </button>

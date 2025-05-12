@@ -19,9 +19,9 @@ const FeaturesCard = ({ classes, children }: FeatureCardProps) => {
       initial='start'
       whileInView='end'
       viewport={{ once: true }}
-      className={`relative overflow-hidden p-[1px] ring ring-inset ring-zing-800/50 rounded-[14px] ${classes}`}
+      className={`relative overflow-hidden p-[3px] ring ring-inset ring-primary-800/50 rounded-[14px] ${classes}`}
     >
-      <div className='relative isolate bog-card backdrop-blur-md rounded-xl overflow-hidden' ref={cardRef} onMouseOver={() => setShowGlow(true)}
+      <div className='relative isolate bg-card backdrop-blur-md rounded-xl overflow-hidden' ref={cardRef} onMouseOver={() => setShowGlow(true)}
         onMouseOut={() => setShowGlow(false)}>
         {children}
       </div>

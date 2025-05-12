@@ -50,7 +50,7 @@ const Overview = () => {
           <Carousel>
             <CarouselContent>
               {achievements.map((src, index) => (
-                <CarouselItem key={index} className="w-[100%] max-w-[500px]">
+                <CarouselItem key={index} className="max-w-[90%]">
                   <img
                     src={src}
                     alt='image'

@@ -51,7 +51,7 @@ const Process = () => {
                 viewport={{ once: true }}
               >
                 <motion.div
-                  className='w-16 h-16 grid place-items-center rounded-full border border-foreground/5 shirnk-0'
+                  className='w-16 h-16 grid place-items-center rounded-full border border-primary/5 shirnk-0'
                   variants={variants.fadeInScale}
                 >
                   {icon}

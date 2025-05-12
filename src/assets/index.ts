@@ -37,6 +37,7 @@ import achievement5 from "@/assets/achievement-5.webp" ;
 import achievement6 from "@/assets/achievement-6.webp" ;
 import achievement7 from "@/assets/achievement-7.webp" ;
 import achievement8 from "@/assets/achievement-8.webp" ;   
+import Banner from "@/assets/Banner.jpg" ; 
 
 
 const brands = [brand1, brand2, brand3, brand4, brand5];
@@ -60,5 +61,6 @@ export {
   avatar1,
   avatar2,
   avatar3,
-  ctaBanner
+  ctaBanner , 
+  Banner
 };
